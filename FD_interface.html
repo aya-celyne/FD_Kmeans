@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Interface</title>
+	<!-- Add Bootstrap stylesheet -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<!-- Add custom stylesheet -->
+	<style>
+		body {
+			background-image: url("clustring.png");
+			background-size: cover;
+		}
+		.center {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+		.btn-row {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			margin-top: 20px;
+			margin-bottom: 50px;
+		}
+		.btn-row button {
+			margin-right: 20px;
+			margin-left: 20px;
+			height: 60px;
+			width: 150px;
+			font-size: 24px;
+			border-radius: 0;
+		}
+		.btn-primary {
+			background-color: #007bff;
+			border-color: #007bff;
+			color: white;
+		}
+		.btn-success {
+			background-color: #5cb85c;
+			border-color: #5cb85c;
+			color: white;
+		}
+		.title {
+			color: rgb(180, 221, 255);
+			font-size: 48px;
+			font-weight: bold;
+			text-align: center;
+			margin-bottom: 50px;
+		}
+		p {
+			color: antiquewhite;
+			text-align: center;
+			margin-bottom: 50px;
+			margin-left: 100px;
+			margin-right: 100px;
+		}
+		.btn-success-custom {
+			background-color: #5cb85c;
+			border-color: #4cae4c;
+			font-size: 24px;
+			padding: 15px 25px;
+			border-radius: 30px;
+		}
+		.btn-success-custom:hover {
+			background-color: #449d44;
+			border-color: #398439;
+		}
+		.number-input {
+			width: 100px;
+			height: 30px;
+			font-size: 18px;
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<div class="center">
+		<div class="btn-row">
+			<button type="button" class="btn btn-primary">Upload a file</button>
+			<button type="button" class="btn btn-success" data-toggle="modal" data-target="#number-modal">Input</button>
+		</div>
+		<h1 class="title">Please choose</h1>
+		<p>
+			K-means is a clustering algorithm used for partitioning a set of data points into a specified number (k) of clusters. The algorithm starts by randomly selecting k initial cluster centroids and then assigns each data point to the nearest centroid. It then computes the mean of the data points assigned to each cluster and updates the centroid accordingly. The process is repeated until convergence is reached, which occurs when the centroids no longer move significantly or a maximum number of iterations is reached. The resulting clusters are the groups of data points that are most similar to each other and most dissimilar to the data points in the other clusters. K-means is commonly used in data analysis, pattern recognition, and machine learning for unsupervised learning tasks.
+		</p>
+		<button type="button" class="btn btn-success btn-success-custom">Submit</button>
+	</div>
+<!-- Number input modal -->
+<div class="modal fade" id="number-modal" tabindex="-1" role="dialog" aria-labelledby="number-modal-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="number-modal-label">Input Number</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="form-group">
+              <label for="number-input">Enter a number:</label>
+              <input type="number" class="form-control" id="number-input">
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="submit-number">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+	
+
+
+</body>
+</html>
